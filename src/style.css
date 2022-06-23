@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root{
+    /*Primary*/
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    /*Neutral*/
+        /*Light Theme*/
+        --Very-Light-Gray: hsl(0, 0%, 98%);
+        --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+        --Light-Grayish-Blue: hsl(233, 11%, 84%);
+        --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+        --Very-Dark-Grayish-Blue-light: hsl(235, 19%, 35%);
+
+        /*Dark Theme*/
+        --Very-Dark-Blue: hsl(235, 21%, 11%);
+        --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+        --Light-Grayish-Blue: hsl(234, 39%, 85%);
+        --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+        --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+        --Very-Dark-Grayish-Blue-1: hsl(233, 14%, 35%);
+        --Very-Dark-Grayish-Blue-2: hsl(237, 14%, 26%);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+.background-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.title-and-switch-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;    
+}
+.title{
+    letter-spacing: 0.4em;
+    color: var(--Very-Light-Gray);
+}
+.input-div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;   
+    
+}
+.custom-checkbox{
+    border-radius: 5px; 
+    width: 3.2em;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkbox{
+    width: 45%;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--Very-Dark-Grayish-Blue-light);  
+    
+}
+.checkbox:hover{
+    border: 1px solid var(--Bright-Blue);
+    background-color: var(--Bright-Blue);
+    background-image: url(./Assets/images/icon-check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.input-box{
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 100%;
+    padding: 5px 10px 5px 15%;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--Dark-Grayish-Blue);
+}
+.input-box:focus{
+    outline: none;
+}
+.empty-color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 70vh;
+    background-color: var(--Very-Light-Gray);
+}
+.notesCheckbox{
+    width: 60%;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--Very-Dark-Grayish-Blue-light);
+    margin-left: 10px;
+    cursor: pointer;
+}
+.ncActive{
+    background-color: var(--Bright-Blue);
+    background-image: url(./Assets/images/icon-check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.dark-empty-color{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 70vh;
+    background-color: var(--Very-Dark-Blue);
+}
+.allNotesAndLeft-div{
+    margin-top: -1em;
+    width: 85%;
+    border-radius: 5px;
+}
+.notes-div{   
+    position: relative;
+    height: 35px; 
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 5px 5px 15%; 
+    display: flex;
+    align-items: center;
+    color: var(--Dark-Grayish-Blue);
+}
+.singleNote{
+    position: relative;  
+}
+.checked{
+    text-decoration: line-through;
+}
+.crossSymbol{
+    position: absolute;
+    left: 80%;  
+    background-image: url(./Assets/images/icon-cross.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 15px;   
+}
+.notes-left-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-top: 1px solid var(--Very-Dark-Desaturated-Blue); ;
+    height: 35px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 0px;
+    gap: 2em;
+    color: var(--Dark-Grayish-Blue);
+}
+.clearCompleted:hover{
+    color: var(--Very-Dark-Grayish-Blue-2);
+    cursor: pointer;
+}
+.changingP-MainDiv{
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 85%;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 0px;
+    color: var(--Dark-Grayish-Blue);
+}
+.light{
+    border: 1px solid var(--Dark-Grayish-Blue); 
+    background-color: var(--Very-Light-Gray);
+}
+.dark{
+    border: 1px solid var(--Very-Dark-Desaturated-Blue); 
+    background-color: var(--Very-Dark-Blue);
+}
+.mobileBottomSection{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid var(--Very-Dark-Desaturated-Blue); ;
+    height: 35px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 0px;
+    gap: 1em;
+    color: var(--Dark-Grayish-Blue);
+}
+.checked{
+    text-decoration: line-through;
+}
+.All-mobile{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue);
+    padding-left: 3.5em;
+}
+.Mobile-Active{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue);
+}
+.Mobile-complete{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue);
+    padding-right: 3.5em;
+}
+.active-p-right{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Bright-Blue);
+    padding-right: 3.5em;
+}
+.active-p{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Bright-Blue);
+}
+.active-p-left{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Bright-Blue);
+    padding-left: 3.5em;
+}
+@media screen and (min-width:1024px) {
+    .background-img{
+        justify-content: center;
+    }
+    .title-and-switch-icon{  
+        width: 45%;    
+    }
+    .input-div{
+        width: 45%;        
+    }
+    .allNotesAndLeft-div{
+        margin-top: -2em;
+        width: 45%;
+    }
+    .changingP-MainDiv{
+        display: none;
+    }
+    .notes-left-div{
+        display: none;
+    }
+    .mobileBottomSection{
+        display: flex;
+    }
+    
+}
